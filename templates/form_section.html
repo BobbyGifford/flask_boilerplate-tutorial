@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div style="text-align: center">
+        <p>
+            {% if breed %}
+                The breed is {{ breed }}
+                <br/>
+                Update it
+                <hr />
+            {% else %}
+                Please enter breed:
+            {% endif %}
+        </p>
+
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            {{ form.breed.label }}{{ form.breed() }}
+            {{ form.submit() }}
+        </form>
+
+    </div>
+
+{% endblock %}

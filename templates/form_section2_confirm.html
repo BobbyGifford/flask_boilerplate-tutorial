@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        <h1>
+            {% for item in get_flashed_messages() %}
+            {{ item }}
+            {% endfor %}
+        </h1>
+        <ul>
+            <li>Name you entered: {{ session['item_name'] }}</li>
+            <li>Is juicy?: {{ session['juicy'] }}</li>
+            <li>Category: {{ session['category'] }}</li>
+            <li>Food choice: {{ session['food_choice'] }}</li>
+            <li>Feedback: {{ session['feedback'] }}</li>
+        </ul>
+    </div>
+{% endblock %}
+
+
+
+

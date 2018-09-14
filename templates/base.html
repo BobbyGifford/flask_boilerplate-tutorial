@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Base</title>
+</head>
+<body>
+<nav>
+    <a href="{{ url_for('index') }}">link 1</a>
+    <a href="{{ url_for("test") }}">link 2</a>
+    <a href="{{ url_for("signup") }}">link 3</a>
+    <a href="{{ url_for("form_section") }}">link 4</a>
+    <a href="{{ url_for("form_section2") }}">link 5</a>
+
+</nav>
+
+{% block content %}
+
+{% endblock %}
+
+<h1>this is part of base</h1>
+</body>
+</html>

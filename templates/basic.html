@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        <h1 style="text-align: center">Welcome to the site {{ passed_var }}!</h1>
+        <img style="margin-left: 25vw" src="../static/bgtest.jpg" alt="">
+        <h3 style="text-align: center">{{ test_dict }}</h3>
+        <ul>
+            {% for x in test_list %}
+
+                <li>
+                    {{ x }}
+                    {% if x%2 == 0 %}
+                        this number is even
+                    {% else %}
+                        this number is odd
+                    {% endif %}
+                </li>
+
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
+
+

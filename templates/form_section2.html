@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <br>
+        {{ form.item_name.label }}{{ form.item_name }}
+        <br>
+        {{ form.juicy.label }}{{ form.juicy }}
+        <br>
+        {{ form.category.label }}{{ form.category }}
+        <br>
+        {{ form.food_choice.label }}{{ form.food_choice }}
+        <br>
+        {{ form.feedback.label }}{{ form.feedback }}
+        <br>
+        {{ form.submit() }}
+    </form>
+
+{% endblock %}
